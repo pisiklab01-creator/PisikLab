@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PisikLab Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Style/dashboard-style.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="dashboard-header__left">
+      <img src="../Assets/Logo/logo.png" alt="PisikLab Logo" class="dashboard-header__logo" />
+
+      <div class="dashboard-header__divider"></div>
+
+      <div class="dashboard-header__brand-text">
+        <h1>PisikLab</h1>
+        <p>Localized Physics Experiments and Video Demonstrations for Thermodynamics.</p>
+      </div>
+    </div>
+
+<button class="dashboard-menu-toggle" id="dashboardMenuToggle" aria-label="Open navigation">
+  ☰ Menu
+</button>
+
+<nav class="dashboard-header__nav" id="dashboardNav">
+  <button class="nav-btn active" data-panel="homePanel">
+    <img src="../Assets/Icons/home.png" alt="" class="nav-btn__icon">
+    <span class="nav-btn__label">Home</span>
+  </button>
+
+  <button class="nav-btn" data-panel="lessonPanel">
+    <img src="../Assets/Icons/lesson.png" alt="" class="nav-btn__icon">
+    <span class="nav-btn__label">Lesson</span>
+  </button>
+
+  <button class="nav-btn" data-panel="videosPanel">
+    <img src="../Assets/Icons/videos.png" alt="" class="nav-btn__icon">
+    <span class="nav-btn__label">Videos</span>
+  </button>
+
+  <button class="nav-btn" data-panel="aboutPanel">
+    <img src="../Assets/Icons/about.png" alt="" class="nav-btn__icon">
+    <span class="nav-btn__label">About</span>
+  </button>
+
+  <button class="nav-btn" data-panel="profilePanel">
+    <img src="../Assets/Icons/profile.png" alt="" class="nav-btn__icon">
+    <span class="nav-btn__label">Profile</span>
+  </button>
+
+</nav>
+
+  </header>
+<main class="dashboard-main">
+<section class="dashboard-panel active-panel" id="homePanel">
+  <section class="leaderboard-card">
+    <div class="leaderboard-card__header">
+      <div>
+        <h2 class="leaderboard-card__title">Leaderboard</h2>
+        <p class="leaderboard-card__subtitle">Top learners ranked by energy points</p>
+      </div>
+
+      <button class="leaderboard-card__my-rank-btn" id="findMyRankBtn">
+        Find My Rank
+      </button>
+    </div>
+
+    <div class="leaderboard-table">
+      <div class="leaderboard-table__head">
+        <div>Rank</div>
+        <div>Name</div>
+        <div>Badge</div>
+        <div>Points</div>
+      </div>
+
+      <div class="leaderboard-table__body" id="leaderboardBody">
+        <div class="leaderboard-empty">Loading leaderboard...</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-summary">
+    <h2 class="dashboard-summary__title" id="dashboardGreeting">Hello, Student!</h2>
+
+<div class="dashboard-stat-card dashboard-stat-card--badge">
+  <div class="dashboard-stat-card__icon-wrap dashboard-stat-card__icon-wrap--badge">
+    <img
+      src="../Assets/Badges/no-badge.svg"
+      alt="Current Badge"
+      class="dashboard-stat-card__icon dashboard-stat-card__icon--badge"
+      id="currentBadgeIcon"
+    >
+  </div>
+
+  <div class="dashboard-stat-card__content">
+    <p class="dashboard-stat-card__label dashboard-stat-card__label--badge">Current Badge</p>
+    <h3 class="dashboard-stat-card__value dashboard-stat-card__value--badge" id="currentBadgeValue">
+      No Badge Yet
+    </h3>
+  </div>
+</div>
+
+    <div class="dashboard-stat-card">
+      <div class="dashboard-stat-card__content">
+        <p class="dashboard-stat-card__label">Energy Points</p>
+        <h3 class="dashboard-stat-card__value" id="pointsValue">0</h3>
+      </div>
+    </div>
+
+    <button class="continue-btn" id="continueLearningBtn">
+      Continue Learning
+    </button>
+
+  </section>
+</section>
+
+<section class="dashboard-panel hidden-panel lesson-panel" id="lessonPanel">
+  <div class="lesson-panel__header">
+    <h2 class="lesson-panel__title">Select a Lesson</h2>
+  </div>
+
+  <div class="lesson-panel__grid">
+    <article class="lesson-card">
+      <div class="lesson-card__image-wrap">
+        <img src="../Assets/Lesson 1/lesson-1.png" alt="1st Law of Thermodynamics" class="lesson-card__image">
+      </div>
+
+      <div class="lesson-card__content">
+        <h3 class="lesson-card__title">1st Law of Thermodynamics</h3>
+        <p class="lesson-card__description">
+          First Law: Energy cannot be created or destroyed.
+        </p>
+      </div>
+
+<div class="lesson-card__footer">
+  <p class="lesson-card__progress" id="lesson1ProgressText">Not started yet</p>
+  <button class="lesson-card__button" data-lesson-id="lesson1">
+    Start Activity
+  </button>
+</div>
+    </article>
+
+    <article class="lesson-card">
+      <div class="lesson-card__image-wrap">
+        <img src="../Assets/Lesson 2/lesson-2.png" alt="2nd Law of Thermodynamics" class="lesson-card__image">
+      </div>
+
+      <div class="lesson-card__content">
+        <h3 class="lesson-card__title">2nd Law of Thermodynamics</h3>
+        <p class="lesson-card__description">
+          Second Law: Total entropy of an isolated system always increases over time.
+        </p>
+      </div>
+
+<div class="lesson-card__footer">
+  <p class="lesson-card__progress" id="lesson2ProgressText">Not started yet</p>
+  <button class="lesson-card__button" data-lesson-id="lesson2">
+    Start Activity
+  </button>
+</div>
+    </article>
+  </div>
+</section>
+
+<section class="dashboard-panel hidden-panel videos-panel" id="videosPanel">
+  <div class="videos-panel__header">
+    <h2 class="videos-panel__title">Video Demonstrations</h2>
+    <p class="videos-panel__subtitle">
+      Watch localized experiments and demonstrations for thermodynamics lessons.
+    </p>
+  </div>
+
+  <div class="videos-layout">
+
+    <!-- LEFT: PLAYER -->
+    <div class="video-player-card">
+      <div class="video-player-card__media" id="videoPlayerMedia">
+        <iframe
+  id="mainVideoPlayer"
+  class="video-player-card__video"
+  title="Video Demonstration"
+  loading="lazy"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen>
+</iframe>
+
+        <div class="video-player-card__locked" id="videoLockedState">
+          <div class="video-player-card__locked-title">Video Locked</div>
+          <div class="video-player-card__locked-text">
+            Complete the required lesson first to unlock this video demonstration.
+          </div>
+        </div>
+      </div>
+
+<div class="video-player-card__info">
+  <h3 class="video-player-card__title" id="mainVideoTitle">
+    No Video Available Yet
+  </h3>
+  <p class="video-player-card__meta" id="mainVideoLesson">
+    Locked
+  </p>
+
+  <div class="video-player-card__description-block" id="mainVideoDescription">
+    <div class="video-player-card__section">
+      <h4 class="video-player-card__section-title">Objectives</h4>
+      <ul class="video-player-card__list">
+        <li>Complete a lesson to unlock video demonstrations.</li>
+      </ul>
+    </div>
+
+    <div class="video-player-card__section">
+      <h4 class="video-player-card__section-title">Materials</h4>
+      <ul class="video-player-card__list">
+        <li>Available after unlocking the selected video.</li>
+      </ul>
+    </div>
+
+    <div class="video-player-card__section">
+      <h4 class="video-player-card__section-title">Procedure</h4>
+      <ol class="video-player-card__list video-player-card__list--ordered">
+        <li>Complete the required lesson first.</li>
+        <li>Select an unlocked video from the playlist.</li>
+        <li>Review the experiment details while watching.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</div>
+    <!-- RIGHT: PLAYLIST -->
+    <aside class="video-playlist-card">
+      <h3 class="video-playlist-card__title">Playlist</h3>
+
+      <div class="video-playlist" id="videoPlaylist">
+<button
+  class="video-item locked"
+  data-video-id="eggTray"
+  data-video-embed="https://www.youtube-nocookie.com/embed/GOhESfdDyYA"
+  data-video-title="Egg Tray Heat Absorption Test"
+  data-video-lesson="1st Law of Thermodynamics"
+  data-video-objectives="To demonstrate the First Law of Thermodynamics by observing how heat energy is transferred and how color affects the absorption of heat."
+  data-video-materials="Egg tray||Black paint||Paintbrush||Scissors||Thermometer||Two instant noodle cups||Hot water"
+  data-video-procedure="Prepare all the materials and place them on a flat and stable surface.||Using scissors, cut the egg tray into two equal pieces.||Leave one piece in its natural color, and paint the other piece black using black paint. Allow the painted tray to dry completely.||Pour hot water into two instant noodle cups. Make sure both cups contain approximately the same amount of hot water.||Place one egg tray piece on top of each cup. One cup should have the natural-colored tray, while the other cup should have the black-painted tray.||Allow the trays to remain in place for a few minutes so that heat from the hot water can transfer to the trays.||After several minutes, use a thermometer to measure the temperature of each tray.||Compare the temperature readings of the two trays and record your observations.||Analyze which tray absorbed more heat and relate the results to heat absorption and energy transfer."
+  disabled
+>
+  <div class="video-item__thumb">🔒</div>
+  <div class="video-item__content">
+    <p class="video-item__title">Egg Tray Heat Absorption Test</p>
+    <p class="video-item__lesson">1st Law of Thermodynamics</p>
+  </div>
+</button>
+
+<button
+  class="video-item locked"
+  data-video-id="candleSpoon"
+  data-video-embed="https://www.youtube-nocookie.com/embed/sfWw-yyIoi8"
+  data-video-title="Candle Heating Water with a Spoon Test"
+  data-video-lesson="1st Law of Thermodynamics"
+  data-video-objectives="To demonstrate the conversion of chemical energy into heat energy and observe how heat energy from a flame is transferred to water."
+  data-video-materials="Candle||Metal spoon||Small amount of water||Lighter or match||Tissue or cloth (optional, for handling the spoon if it becomes hot)"
+  data-video-procedure="Prepare all the materials and place them on a stable, flat surface.||Position the candle securely so it will not easily tip over.||Carefully light the candle using a lighter or match.||Pour a small amount of water into the metal spoon, just enough to cover the bottom.||Hold the handle of the spoon and carefully place the spoon above the candle flame so that the bottom of the spoon is exposed to the heat.||Keep the spoon steady above the flame and observe the changes happening to the water.||After some time, observe if the temperature of the water increases or if small bubbles begin to form.||Continue observing for a few moments and take note of what happens to the water as it absorbs heat from the flame.||Once the observation is complete, carefully remove the spoon from the flame.||Extinguish the candle and allow the spoon to cool before placing it down."
+  disabled
+>
+  <div class="video-item__thumb">🔒</div>
+  <div class="video-item__content">
+    <p class="video-item__title">Candle Heating Water with a Spoon Test</p>
+    <p class="video-item__lesson">1st Law of Thermodynamics</p>
+  </div>
+</button>
+
+<button
+  class="video-item locked"
+  data-video-id="grainMixing"
+  data-video-embed="https://www.youtube-nocookie.com/embed/GcauNRyr7Xs"
+  data-video-title="Grain Mixing Experiment"
+  data-video-lesson="2nd Law of Thermodynamics"
+  data-video-objectives="To demonstrate entropy and the Second Law of Thermodynamics by observing how an ordered system naturally progresses toward disorder over time."
+  data-video-materials="Clear container with a lid||Mung beans (munggo)||Rice||Corn kernels"
+  data-video-procedure="Prepare all the materials and place the clear container on a flat, stable surface.||Layer the grains inside the container: place mung beans at the bottom, rice in the middle, and corn kernels on top. Ensure the layers are clean and distinct.||Observe the initial arrangement of the grains. This represents low entropy (high order).||Close the container with the lid securely.||Gently shake the container for a few moments, allowing the grains to move and collide randomly.||Open the container and observe the new arrangement of the grains. The neat layers should now be mixed, representing high entropy (greater disorder).||Note that even if the container is shaken again, the grains do not naturally return to the original layered arrangement.||Record your observations and relate them to the concept of entropy and the Second Law of Thermodynamics."
+  disabled
+>
+  <div class="video-item__thumb">🔒</div>
+  <div class="video-item__content">
+    <p class="video-item__title">Grain Mixing Experiment</p>
+    <p class="video-item__lesson">2nd Law of Thermodynamics</p>
+  </div>
+</button>
+
+<button
+  class="video-item locked"
+  data-video-id="barakoGatas"
+  data-video-embed="https://www.youtube-nocookie.com/embed/W0qezaEQmp8"
+  data-video-title="Barako Meets Gatas"
+  data-video-lesson="2nd Law of Thermodynamics"
+  data-video-objectives="To demonstrate the Second Law of Thermodynamics by observing how heat flows from a hotter substance to a colder substance until thermal equilibrium is reached."
+  data-video-materials="1 cup of hot kapeng barako||1 cup of cold fresh milk or evaporated milk||Two clear glasses||Spoon||Thermometer||Timer or stopwatch||Optional: food coloring (to make the mixing easier to observe)"
+  data-video-procedure="Prepare all the materials and place them on a stable working surface.||Brew a cup of hot kapeng barako and pour it into one clear glass labeled Hot.||Measure and record the temperature of the hot coffee using a thermometer.||Pour cold milk into another clear glass labeled Cold, then measure and record its temperature.||Slowly pour the hot coffee into the glass containing the cold milk.||Immediately start the timer once the two liquids are combined.||Observe the mixing process as the color of the liquid gradually changes while the coffee and milk combine.||Gently stir the mixture at different time intervals, such as after 10 seconds, 30 seconds, and 1 minute.||Measure the temperature of the mixture again and record the result.||Compare the initial temperatures of the coffee and milk with the final temperature of the mixture and record your observations."
+  disabled
+>
+  <div class="video-item__thumb">🔒</div>
+  <div class="video-item__content">
+    <p class="video-item__title">Barako Meets Gatas</p>
+    <p class="video-item__lesson">2nd Law of Thermodynamics</p>
+  </div>
+</button>
+
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="dashboard-panel hidden-panel profile-panel" id="profilePanel">
+  <div class="profile-panel__header">
+    <h2 class="profile-panel__title">Profile Settings</h2>
+    <p class="profile-panel__subtitle">
+      Manage your account details and learning progress.
+    </p>
+  </div>
+
+  <section class="profile-card profile-card--wide">
+  <div class="profile-card__header-row">
+    <h3 class="profile-card__title">Lesson Attempts</h3>
+
+    <div class="attempts-toggle">
+      <button
+        type="button"
+        class="attempts-toggle__btn active"
+        data-attempt-lesson="lesson1"
+        id="attemptLesson1Btn"
+      >
+        Lesson 1
+      </button>
+
+      <button
+        type="button"
+        class="attempts-toggle__btn"
+        data-attempt-lesson="lesson2"
+        id="attemptLesson2Btn"
+      >
+        Lesson 2
+      </button>
+    </div>
+  </div>
+
+  <div class="attempts-table-wrap">
+    <table class="attempts-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Assessment Score</th>
+          <th>Assessment Badge</th>
+        </tr>
+      </thead>
+      <tbody id="attemptsTableBody">
+        <tr>
+          <td colspan="3" class="attempts-table__empty">No attempts yet.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section> <br>
+
+  <div class="profile-panel__grid">
+    <section class="profile-card">
+      <h3 class="profile-card__title">Change Display Name</h3>
+      <input type="text" id="profileDisplayName" class="profile-input" placeholder="Enter new display name" maxlength="30">
+      <button id="saveDisplayNameBtn" class="profile-btn">Save Name</button>
+    </section>
+
+    <section class="profile-card">
+      <h3 class="profile-card__title">Change Email</h3>
+      <input type="email" id="profileNewEmail" class="profile-input" placeholder="Enter new email">
+      <input type="password" id="profileCurrentPasswordForEmail" class="profile-input" placeholder="Enter current password">
+      <button id="saveEmailBtn" class="profile-btn">Update Email</button>
+    </section>
+
+    <section class="profile-card">
+      <h3 class="profile-card__title">Change Password</h3>
+      <input type="password" id="profileCurrentPasswordForPassword" class="profile-input" placeholder="Current password">
+      <input type="password" id="profileNewPassword" class="profile-input" placeholder="New password">
+      <button id="savePasswordBtn" class="profile-btn">Update Password</button>
+    </section>
+
+    <section class="profile-card profile-card--danger">
+      <h3 class="profile-card__title">Danger Zone</h3>
+      <p class="profile-card__text">
+        Reset your points, badges, progress, and activity records. This cannot be undone.
+      </p>
+      <button id="resetScoresBtn" class="profile-btn profile-btn--danger">Reset My Scores</button>
+      <button id="logoutBtn" class="profile-btn profile-btn--secondary">Log Out</button>
+    </section>
+  </div>
+</section>
+
+<section class="dashboard-panel hidden-panel about-panel" id="aboutPanel">
+  <div class="about-panel__container">
+
+    <h2 class="about-panel__title">PisikLab</h2>
+
+    <p class="about-panel__text">
+      PisikLab is built on the idea that learning the First Law and Second Law of Thermodynamics becomes clearer and more engaging when students can explore energy and heat concepts through interactive, internet-based activities.
+      With PisikLab, learners can study thermodynamics anytime and anywhere—especially helpful for students who may not have access to complete laboratory equipment for calorimetry, heat transfer setups, or controlled experiments.
+      By using simulations and guided virtual investigations, PisikLab bridges the gap between theory and real-world behavior of energy systems.
+    </p>
+
+    <p class="about-panel__text">
+      PisikLab focuses on helping students understand how energy is conserved and transferred (First Law of Thermodynamics) and why real processes have limits due to entropy and irreversibility (Second Law of Thermodynamics).
+      Students can explore scenarios like heat engines, refrigerators, thermal efficiency, expanding gases, and temperature–heat relationships using step-by-step activities that encourage observation, calculation, and interpretation.
+    </p>
+
+    <h3 class="about-panel__subtitle">The features of PisikLab are:</h3>
+
+    <ul class="about-panel__list">
+      <li>Lessons and activities centered on energy conservation, heat, and work (First Law)</li>
+      <li>Interactive simulations for heat flow, PV processes, engines, and efficiency (Second Law concepts included)</li>
+      <li>Visual explanations of entropy, reversibility, and why “energy quality” matters</li>
+      <li>Guided experiment-style tasks to calculate work, heat, internal energy changes, and thermal efficiency</li>
+      <li>Practice quizzes and assessment checkpoints to strengthen problem-solving and concept mastery</li>
+    </ul>
+
+    <p class="about-panel__text">
+      Through PisikLab’s learning-supported assessments, students develop both conceptual understanding and analytical skills—such as reading PV diagrams, tracking energy transfers, comparing reversible vs. irreversible processes, and evaluating efficiency limits.
+      By connecting thermodynamics to everyday systems (power plants, car engines, air-conditioning, and cooking), PisikLab makes the First and Second Laws practical, memorable, and easier to apply.
+    </p>
+
+  </div>
+</section>
+
+<div class="bonus-toast" id="bonusToast">
+  <div class="bonus-toast__title">Congratulations!</div>
+  <div class="bonus-toast__message" id="bonusToastMessage">
+    You received: +2 Daily Sign-In Bonus
+  </div>
+</div>
+
+  <script type="module" src="../Scripts/Dashboard/dashboard-script.js"></script>
+</body>
+</html>

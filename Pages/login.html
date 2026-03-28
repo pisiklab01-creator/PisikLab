@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PisikLab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../Style/login-style.css" />
+</head>
+<body>
+  <div class="intro-modal" id="introModal">
+    <div class="intro-modal__content">
+      <img src="../Assets/Logo/logo.png" alt="PisikLab Logo" class="intro-modal__logo" />
+
+      <div class="intro-modal__divider"></div>
+
+      <div class="intro-modal__text">
+        <h1>PisikLab</h1>
+        <p>Localized Physics Experiments and Video Demonstrations for Thermodynamics.</p>
+      </div>
+    </div>
+
+    <button id="enterBtn" class="intro-modal__button">Get Started</button>
+  </div>
+
+  <header class="login-header">
+    <div class="login-header__brand">
+      <img src="../Assets/Logo/logo.png" alt="PisikLab Logo" class="login-header__logo" />
+
+      <div class="login-header__divider"></div>
+
+      <div class="login-header__text">
+        <h1>PisikLab</h1>
+        <p>Localized Physics Experiments and Video Demonstrations for Thermodynamics.</p>
+      </div>
+    </div>
+  </header>
+
+<main class="main">
+<section class="hero-panel">
+  <div id="heroWelcome" class="hero-state">
+    <h2 class="welcome-title fade-text" id="welcomeTitle">Welcome Back!</h2>
+    <p class="welcome-subtitle fade-text" id="welcomeSubtitle">
+      Please log-in or make your account to begin.
+    </p>
+  </div>
+
+  <div id="heroAuth" class="hero-state hidden">
+    <h2 class="auth-title">Authenticate Your Email</h2>
+    <p class="auth-subtitle">
+      Please check your registered Gmail account and click the verification link sent to you.
+      Once your email is verified, the button below will be enabled.
+    </p>
+
+    <button class="primary-btn auth-verify-btn" id="checkAuthBtn" disabled>
+      I've Verified My Email
+    </button>
+  </div>
+</section>
+
+  <section class="auth-panel">
+    <div class="auth-container" id="authContainer">
+      <!-- LOGIN CARD -->
+      <div class="auth-card fade show" id="loginCard">
+        <h3>LOGIN</h3>
+
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+
+        <label class="remember">
+          <input type="checkbox">
+          <span>Remember me</span>
+        </label>
+
+        <button class="primary-btn" id="loginBtn" disabled>Login</button>
+
+        <p class="switch">
+          Don’t have an Account? <span id="showSignup">Sign up</span>
+        </p>
+      </div>
+
+      <!-- SIGNUP CARD -->
+      <div class="auth-card fade hidden" id="signupCard">
+        <h3>Create an Account</h3>
+
+        <input type="text" id="signupName" maxlength="30" placeholder="Username">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Password">
+
+        <button class="primary-btn" id="signupBtn" disabled>Register</button>
+
+        <p class="switch">
+          Already have an account? <span id="showLogin">Log in</span>
+        </p>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+  <script type="module" src="../Scripts/Login/login-script.js"></script>
+</body>
+</html>

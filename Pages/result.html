@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PisikLab Results</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Style/result-style.css" />
+</head>
+<body>
+  <main class="results-page">
+    <section class="results-card">
+      <div class="results-banner">
+        <div class="results-banner__spark results-banner__spark--1"></div>
+        <div class="results-banner__spark results-banner__spark--2"></div>
+        <div class="results-banner__spark results-banner__spark--3"></div>
+
+        <p class="results-banner__eyebrow">Lesson Complete</p>
+        <h1 class="results-banner__title">Congratulations!</h1>
+        <p class="results-banner__subtitle" id="resultsLessonTitle">Lesson Title</p>
+      </div>
+
+      <section class="results-section">
+        <h2 class="results-section__title">Score Breakdown</h2>
+        <div class="results-grid" id="resultsBreakdown"></div>
+      </section>
+
+      <section class="results-section">
+        <h2 class="results-section__title">Assessment Badge</h2>
+        <div class="results-badge-card" id="resultsBadgeCard">
+          <div class="results-badge-card__icon-wrap">
+            <img id="resultsBadgeIcon" class="results-badge-card__icon" alt="Badge icon" />
+          </div>
+          <div class="results-badge-card__content">
+            <h3 id="resultsBadgeLabel">No Badge</h3>
+            <p id="resultsBadgeDesc">Complete the assessment to earn a badge.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <h2 class="results-section__title">Bonuses</h2>
+        <div class="results-bonus-list" id="resultsBonuses"></div>
+      </section>
+
+      <section class="results-total">
+        <p class="results-total__label">Final Run Total</p>
+        <h2 class="results-total__value" id="resultsFinalTotal">0</h2>
+      </section>
+
+      <div class="results-actions">
+        <button id="claimResultsBtn" class="results-btn results-btn--primary">
+          Claim Points & Finish
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../Scripts/Lesson System/result-script.js"></script>
+</body>
+</html>

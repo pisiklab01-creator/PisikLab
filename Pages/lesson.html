@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PisikLab Lesson</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Style/lesson-style.css" />
+</head>
+<body>
+  <header class="lesson-header">
+    <div class="lesson-header__brand">
+      <img src="../Assets/Logo/logo.png" alt="PisikLab Logo" class="lesson-header__logo" />
+
+      <div class="lesson-header__divider"></div>
+
+      <div class="lesson-header__text">
+        <h1>PisikLab</h1>
+        <p>Localized Physics Experiments and Video Demonstrations for Thermodynamics.</p>
+      </div>
+    </div>
+
+    <button class="lesson-header__back-btn" id="backToDashboardBtn">
+      ← Back to Dashboard
+    </button>
+  </header>
+  <main class="lesson-main">
+  <div class="lesson-nav-container">
+    <section class="lesson-tabs" id="lessonTabs">
+      <button class="lesson-tab active" data-step="motivation">Motivation</button>
+      <button class="lesson-tab" data-step="diagnostic">Diagnostic Test</button>
+      <button class="lesson-tab" data-step="content">Lesson</button>
+      <button class="lesson-tab" data-step="video">Video Demonstration</button>
+      <button class="lesson-tab" data-step="lab">Lab Discussion</button>
+      <button class="lesson-tab" data-step="assessment">Assessment</button>
+    </section>
+
+    <div class="lesson-scorekeeper">
+      <span class="lesson-scorekeeper__label">Session Score</span>
+      <span class="lesson-scorekeeper__value" id="lessonSessionScore">0</span>
+    </div>
+  </div>
+
+    <section class="lesson-card">
+      <div class="lesson-card__header">
+        <h2 class="lesson-card__title" id="lessonTitle">Lesson Title</h2>
+        <p class="lesson-card__subtitle" id="lessonStepLabel">Motivation</p>
+      </div>
+
+      <div class="lesson-card__body">
+        <section class="lesson-step active-step" id="step-motivation">
+          <div class="lesson-placeholder">
+            <h3>Motivation</h3>
+            <p>
+              Placeholder for the motivation section. This is where your opening scenario,
+              hook question, or real-life setup will go.
+            </p>
+          </div>
+        </section>
+
+        <section class="lesson-step hidden-step" id="step-diagnostic">
+          <div class="lesson-placeholder">
+            <h3>Diagnostic Test</h3>
+            <p>
+              Placeholder for the diagnostic test. This is where your pre-lesson questions
+              or quick readiness check will go.
+            </p>
+          </div>
+        </section>
+
+        <section class="lesson-step hidden-step" id="step-content">
+          <div class="lesson-placeholder">
+            <h3>Lesson Content</h3>
+            <p>
+              Placeholder for the lesson content. This is where the explanation,
+              discussion, and examples will go.
+            </p>
+          </div>
+        </section>
+
+        <section class="lesson-step hidden-step" id="step-video">
+          <div class="lesson-placeholder">
+            <h3>Video Demonstration</h3>
+            <p>
+              Placeholder for the in-lesson video section. Later, this can be tied to the
+              same unlock system as the dashboard videos.
+            </p>
+          </div>
+        </section>
+
+        <section class="lesson-step hidden-step" id="step-lab">
+          <div class="lesson-placeholder">
+            <h3>Lab Discussion</h3>
+            <p>
+              Placeholder for the guided activity or discussion prompts.
+            </p>
+          </div>
+        </section>
+
+        <section class="lesson-step hidden-step" id="step-assessment">
+          <div class="lesson-placeholder">
+            <h3>Assessment</h3>
+            <p>
+              Placeholder for the assessment section. This is where the quiz or checkpoint
+              will go later.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="lesson-card__footer">
+        <button class="lesson-nav-btn lesson-nav-btn--secondary" id="prevStepBtn">
+          Previous
+        </button>
+
+        <button class="lesson-nav-btn" id="nextStepBtn">
+          Next
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../Scripts/Lesson System/lesson-script.js"></script>
+</body>
+</html>

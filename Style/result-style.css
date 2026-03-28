@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2efe8;
+  color: #111;
+}
+
+.results-page {
+  min-height: 100vh;
+  padding: 28px 16px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.results-card {
+  width: min(100%, 920px);
+  background: #f8f5ee;
+  border: 2px solid #b7aa92;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(17, 17, 17, 0.12);
+}
+
+.results-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 24px 32px;
+  text-align: center;
+  background: linear-gradient(135deg, #d8b458, #f0d487);
+}
+
+.results-banner__eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.results-banner__title {
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.results-banner__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.results-banner__spark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  animation: floatSpark 2.8s ease-in-out infinite;
+}
+
+.results-banner__spark--1 {
+  top: 20px;
+  left: 16%;
+}
+
+.results-banner__spark--2 {
+  top: 32px;
+  right: 18%;
+  animation-delay: 0.5s;
+}
+
+.results-banner__spark--3 {
+  bottom: 18px;
+  left: 26%;
+  animation-delay: 1s;
+}
+
+.results-section {
+  padding: 24px;
+  border-top: 1px solid #e0d6c4;
+}
+
+.results-section__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.results-score-card {
+  background: #fff;
+  border: 2px solid #ddd3c2;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.results-score-card__label {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.results-score-card__value {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.results-badge-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border: 2px solid #ddd3c2;
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.results-badge-card__icon-wrap {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  background: #f8f4ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.results-badge-card__icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.results-badge-card__content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.results-badge-card__content p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.results-bonus-list {
+  display: grid;
+  gap: 12px;
+}
+
+.results-bonus-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 2px solid #ddd3c2;
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.results-bonus-item--active {
+  border-color: #22c55e;
+  background: #f0fff4;
+}
+
+.results-bonus-item__text {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.results-bonus-item__value {
+  font-size: 18px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.results-total {
+  padding: 28px 24px;
+  border-top: 1px solid #e0d6c4;
+  text-align: center;
+}
+
+.results-total__label {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.results-total__value {
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.results-actions {
+  padding: 0 24px 28px;
+}
+
+.results-btn {
+  width: 100%;
+  min-height: 56px;
+  border: none;
+  border-radius: 16px;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.results-btn--primary {
+  background: #2f89ea;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(47, 137, 234, 0.22);
+}
+
+@keyframes floatSpark {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .results-banner {
+    padding: 32px 18px 24px;
+  }
+
+  .results-banner__title {
+    font-size: 34px;
+  }
+
+  .results-banner__subtitle {
+    font-size: 16px;
+  }
+
+  .results-section,
+  .results-total,
+  .results-actions {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-badge-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .results-total__value {
+    font-size: 42px;
+  }
+}
