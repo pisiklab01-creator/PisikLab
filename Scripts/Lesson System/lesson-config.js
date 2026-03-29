@@ -710,7 +710,7 @@ lab: {
               id: "l2_diag_1",
               question: "A cup of hot coffee is left on a table. After some time, it becomes cold. What does this show?",
               image: {
-                src: "../Assets/Lesson 2/diagnostic.jpg",
+                src: "../Assets/Lesson 2/diagnostic-1.png",
                 alt: "A cup of hot coffee cooling on a table"
               },
               choices: [
@@ -725,7 +725,7 @@ lab: {
               id: "l2_diag_2",
               question: "A student takes ice from the freezer and places it outside. What will happen?",
               image: {
-                src: "../Assets/Lesson 2/diagnostic.jpg",
+                src: "../Assets/Lesson 2/diagnostic-2.png",
                 alt: "Ice from a freezer starting to melt outside"
               },
               choices: [
@@ -740,7 +740,7 @@ lab: {
               id: "l2_diag_3",
               question: "A vendor cooking kwek-kwek notices that oil splatters and heat spreads around. What does this demonstrate?",
               image: {
-                src: "../Assets/Lesson 2/diagnostic.jpg",
+                src: "../Assets/Lesson 2/diagnostic-3.png",
                 alt: "A vendor cooking kwek-kwek with heat and oil spreading"
               },
               choices: [
@@ -755,7 +755,7 @@ lab: {
               id: "l2_diag_4",
               question: "Which statement best describes the Second Law of Thermodynamics?",
               image: {
-                src: "../Assets/Lesson 2/diagnostic.jpg",
+                src: "../Assets/Lesson 2/diagnostic-4.png",
                 alt: "Infographic about heat flow and entropy"
               },
               choices: [
@@ -770,7 +770,7 @@ lab: {
               id: "l2_diag_5",
               question: "Why does a classroom become warm during a hot afternoon?",
               image: {
-                src: "../Assets/Lesson 2/diagnostic.jpg",
+                src: "../Assets/Lesson 2/diagnostic-5.png",
                 alt: "A classroom warming during a hot afternoon"
               },
               choices: [
