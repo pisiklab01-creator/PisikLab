@@ -498,7 +498,7 @@ lab: {
           "Tiny bubbles started forming in the water",
           "The flame became smaller"
         ],
-        correctIndex: 1,
+        correctIndex: 2,
         explanation: "The formation of tiny bubbles indicates that the water temperature is increasing as it absorbs heat energy from the flame."
       }
     ]
