@@ -154,6 +154,10 @@ export const LESSONS = {
             text: "The First Law of Thermodynamics"
           },
           {
+            type: "paragraph",
+            text: "Objectives:"
+          },
+          {
             type: "list",
             items: [
               "Define the First Law of Thermodynamics using examples from everyday life in the Philippines.",
@@ -802,6 +806,10 @@ lab: {
           {
             type: "heading",
             text: "The Second Law of Thermodynamics"
+          },
+          {
+            type: "paragraph",
+            text: "Objectives:"
           },
           {
             type: "list",
