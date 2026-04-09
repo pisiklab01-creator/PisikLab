@@ -154,6 +154,16 @@ export const LESSONS = {
             text: "The First Law of Thermodynamics"
           },
           {
+            type: "list",
+            items: [
+              "Define the First Law of Thermodynamics using examples from everyday life in the Philippines.",
+              "Explain heat, work, and energy by referring to local situations, like cooking sinigang or melting ice in halo-halo.",
+              "Give examples of energy transfer in familiar activities, such as using a stove, a fan, or a battery.",
+              "Show how energy changes form but is not lost in local daily experiences, like coffee cooling on a rainy afternoon.",
+              "Apply the First Law to simple, real-life scenarios they encounter at home or school."
+            ]
+          },
+          {
             type: "paragraph",
             text: "You’ve probably seen heat at work without realizing the science behind it, like when water boils, an iron gets hot, or your sinigang simmers on the stove. Everyday Filipino life is full of energy in motion. Today we learn a fundamental rule that helps us understand all these changes: energy doesn’t disappear, it just moves or transforms."
           },
@@ -792,6 +802,16 @@ lab: {
           {
             type: "heading",
             text: "The Second Law of Thermodynamics"
+          },
+          {
+            type: "list",
+            items: [
+              "Define the Second Law of Thermodynamics.",
+              "Explain the concept of entropy.",
+              "Describe the direction of heat flow in natural processes.",
+              "Identify real-life examples of the second law of thermodynamics.",
+              "Apply the concept of entropy to everyday situations."
+            ]
           },
           {
             type: "paragraph",
